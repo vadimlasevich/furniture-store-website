@@ -1,0 +1,104 @@
+.blog {
+  padding: 8rem 0 14.7rem;
+  position: relative;
+  &::before {
+    content: url("../images/blog-decor-1.png");
+    position: absolute;
+    top: 57.2rem;
+    left: 0;
+  }
+  &::after {
+    content: url("../images/blog-decor-2.png");
+    position: absolute;
+    top: 9.2rem;
+    right: 14rem;
+    z-index: -5;
+  }
+  &__section-title {
+    text-align: center;
+  }
+  & .container {
+    position: relative;
+  }
+  &__items {
+    max-width: 128.4rem;
+    margin: 3rem auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 11.4rem;
+  }
+  &__item {
+    width: calc(50% - (114px / 2));
+    height: 38.8rem;
+    padding: 2rem 5rem;
+    color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.176) 55.63%, rgba(0, 0, 0, 0.8) 100%);
+      border-radius: 50px;
+      z-index: -1;
+    }
+  }
+  &__item-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+    & img {
+      border-radius: 50px;
+    }
+  }
+  &__item-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    line-height: 110%;
+  }
+  &__item-calendar {
+    display: flex;
+    align-items: center;
+  }
+  &__item-date {
+    margin: 0 5px;
+  }
+  &__item-comments {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+  &__item-text {
+    margin: 0 5px;
+  }
+  &__item-title {
+    font-size: 3.6rem;
+    line-height: 120%;
+    margin: 1rem 0 0.5rem 0;
+  }
+  &__item-subtitle {
+    font-size: 2rem;
+    line-height: 120%;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  &__substrate {
+    background: #f5eee1;
+    border-radius: 0px 100px 100px 0px;
+    position: absolute;
+    z-index: -3;
+    bottom: -6.7rem;
+    left: 0;
+    width: 60%;
+    height: 60rem;
+  }
+}

@@ -1,0 +1,46 @@
+.service {
+  padding: 8rem 0;
+  position: relative;
+  &::before {
+    content: url("../images/service-decor.png");
+    position: absolute;
+    top: 6rem;
+    left: 0;
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+  &__content {
+    background: rgba(205, 168, 97, 0.19);
+    border-radius: 30px;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -4rem;
+  }
+  &__item {
+    padding: 12.1rem 0;
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 15.5rem;
+    }
+  }
+  &__item-info {
+    margin-left: 2rem;
+  }
+  &__item-title {
+    font-size: 2rem;
+    line-height: 110%;
+    color: #000;
+  }
+  &__item-subtitle {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 110%;
+    color: #000;
+  }
+}

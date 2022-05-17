@@ -1,0 +1,92 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__phone {
+    font-size: 2.2rem;
+    line-height: 115%;
+    color: var(--color-tuna);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+      content: url("../images/headphone.png");
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
+  &__text {
+    font-style: italic;
+    font-size: 2.2rem;
+    line-height: 115%;
+    margin-left: 6rem;
+  }
+  &__button {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 120%;
+    color: var(--color-white);
+    padding: 1.6rem 2.3rem;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+  &__bottom {
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    margin-left: 4.5rem;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+  }
+  &__link {
+    font-size: 2.2rem;
+    line-height: 120%;
+    color: var(--color-tuna);
+    opacity: 0.6;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 1rem;
+    transition: all 0.5s ease;
+    &:hover {
+      opacity: 1;
+      border-bottom: 2px solid #cda861;
+    }
+  }
+  &__icons {
+    margin-left: auto;
+  }
+  &__icon-search {
+    margin-right: 4rem;
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    transition: all 0.8s ease;
+    stroke: #cda861;
+    &:hover {
+      stroke: #fff;
+    }
+  }
+}

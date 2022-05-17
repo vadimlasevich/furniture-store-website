@@ -1,0 +1,120 @@
+.star-products {
+  padding: 8rem 0;
+  position: relative;
+  &::before {
+    content: url("../images/star-products-decor.png");
+    position: absolute;
+    top: 15.8rem;
+    right: 0;
+  }
+  &__section-title {
+    text-align: center;
+  }
+  &__rounds {
+    margin: 3rem 0 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & span {
+      height: 1px;
+      width: 11.3rem;
+      background: #34383d;
+      margin: 0 10px;
+    }
+  }
+  &__round {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #34383d;
+  }
+  &__round-text {
+    width: 10rem;
+    height: 10rem;
+    background: rgba(52, 56, 61, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & p {
+      font-size: 1.8rem;
+      line-height: 120%;
+    }
+  }
+  &__round-text_active {
+    background: var(--color-sundance);
+  }
+  &__slider {
+    position: relative;
+  }
+}
+.star-products-slider {
+  &__container {
+    padding: 0 6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__slide {
+    width: calc(25% - (22px / 2));
+    border: 2px dashed rgba(52, 56, 61, 0.5);
+    border-radius: 200px 200px 20px 20px;
+    padding: 3.6rem 5.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.8s ease;
+    &:hover {
+      border: 2px dashed var(--color-sundance);
+      box-shadow: 0px 15px 39px rgba(0, 0, 0, 0.1);
+    }
+  }
+  &__slide-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 27rem;
+  }
+  &__slide-content {
+    position: relative;
+  }
+  &__slide-title {
+    font-size: 2.2rem;
+    line-height: 120%;
+  }
+  &__slide-grade {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0 4.6rem;
+    & span {
+      font-size: 2rem;
+      line-height: 110%;
+    }
+  }
+  &__slide-price {
+    font-size: 3rem;
+    line-height: 120%;
+    color: #000;
+    text-align: center;
+    margin-top: 2.6rem;
+  }
+  &__slide-btn {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 47px;
+    height: 47px;
+    background: var(--color-sundance);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.8s ease;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background: var(--color-robRoy);
+    }
+  }
+}

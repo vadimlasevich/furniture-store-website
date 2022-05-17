@@ -1,0 +1,15 @@
+@import "mixins";
+@import "null";
+@import "global";
+@import "vars";
+@import "fonts";
+
+@import "./components/header";
+@import "./components/home";
+@import "./components/about";
+@import "./components/product";
+@import "./components/deals";
+@import "./components/star-products";
+@import "./components/service";
+@import "./components/blog";
+// @import "./components/footer";

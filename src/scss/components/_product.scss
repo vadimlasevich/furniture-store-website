@@ -1,0 +1,88 @@
+.product {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: url("../images/product-decor-img.png");
+    position: absolute;
+    top: 1rem;
+    right: -3.5rem;
+  }
+  &__section-title {
+    text-align: center;
+  }
+  &__slider {
+    position: relative;
+    margin-top: 6rem;
+  }
+}
+.product-slider {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5.6rem;
+  }
+  &__slide {
+    width: calc(20% - (59px / 4));
+    text-align: center;
+    &:hover {
+      .product-slider__slide-image {
+        background: var(--color-sundance);
+      }
+    }
+  }
+  &__slide-image {
+    position: relative;
+    background: var(--color-seashell);
+    border-radius: 30px;
+    height: 14.9rem;
+    transition: all 0.5s ease;
+    & img {
+      position: absolute;
+      top: -3rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+  &__slide-title {
+    font-size: 2.4rem;
+    line-height: 120%;
+    width: 100%;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  &__slide-stars {
+    margin: 2rem auto 1.7rem auto;
+    display: flex;
+    justify-content: center;
+    & img:not(:last-child) {
+      margin-right: 1.1rem;
+    }
+  }
+  &__slide-price {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 120%;
+  }
+  &__slide-text {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 120%;
+    opacity: 0.8;
+    margin: 1.05em auto 1.11em auto;
+    width: 95%;
+  }
+  &__slide-button {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 120%;
+    padding: 1.4rem 4.5rem;
+    &:hover {
+      background: var(--color-sundance);
+    }
+  }
+}
