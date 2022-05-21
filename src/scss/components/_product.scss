@@ -20,11 +20,13 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    padding: 0 5.6rem;
+    padding: 4rem 2.6rem 0 2.6rem;
+    overflow: hidden;
   }
   &__slide {
-    width: calc(20% - (59px / 4));
+    min-width: 20%;
     text-align: center;
+    padding: 0 3rem;
     &:hover {
       .product-slider__slide-image {
         background: var(--color-sundance);
