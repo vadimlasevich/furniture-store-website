@@ -1,9 +1,22 @@
 .home {
-  background-image: url("../images/home-bg.jpg");
+  padding-bottom: 22.8rem;
+  background: url("../images/home-bg.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  padding-bottom: 22.8rem;
+  position: relative;
+  z-index: 10;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba($color: #fff, $alpha: 0.6);
+    z-index: -1;
+    display: none;
+  }
   &__content {
     padding-top: 37rem;
     width: 50%;

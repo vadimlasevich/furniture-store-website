@@ -5,14 +5,16 @@
     box-shadow: 0px 14px 44px rgba(0, 0, 0, 0.03);
     border-radius: 50px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     position: relative;
+    padding: 3rem 0;
     &::before {
-      content: url("../images/about-decor-img.png");
-      position: absolute;
-      bottom: -8rem;
-      left: -9rem;
+      background: url("../images/about-decor-img.png");
+      @include decor-item;
+      width: 19.5rem;
+      height: 19.5rem;
+      bottom: -4rem;
+      left: -4rem;
     }
   }
   &__image {

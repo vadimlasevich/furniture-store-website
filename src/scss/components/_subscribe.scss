@@ -2,9 +2,12 @@
   padding: 8rem 0;
   position: relative;
   background: var(--color-merino);
+  overflow: hidden;
   &::before {
-    content: url("../images/subscribe-decor-1.png");
-    position: absolute;
+    background: url("../images/subscribe-decor-1.png");
+    @include decor-item;
+    width: 8.6rem;
+    height: 11.7rem;
     top: 0;
     left: 0;
   }

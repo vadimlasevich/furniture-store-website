@@ -2,8 +2,10 @@
   padding: 8rem 0;
   position: relative;
   &::before {
-    content: url("../images/star-products-decor.png");
-    position: absolute;
+    background: url("../images/star-products-decor.png");
+    @include decor-item;
+    width: 11.5rem;
+    height: 8.6rem;
     top: 15.8rem;
     right: 0;
   }
@@ -53,15 +55,16 @@
 }
 .star-products-slider {
   &__container {
-    padding: 0 6rem;
+    margin: 0 5rem;
     display: flex;
-    justify-content: space-between;
+    overflow: hidden;
   }
   &__slide {
-    width: calc(25% - (22px / 2));
+    min-width: 23.5%;
     border: 2px dashed rgba(52, 56, 61, 0.5);
     border-radius: 200px 200px 20px 20px;
     padding: 3.6rem 5.4rem;
+    margin: 0 1.1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -76,6 +79,10 @@
     align-items: center;
     justify-content: center;
     min-height: 27rem;
+    & img {
+      position: relative;
+      z-index: -1;
+    }
   }
   &__slide-content {
     position: relative;

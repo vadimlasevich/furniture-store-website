@@ -4,8 +4,10 @@
   position: relative;
   z-index: -2;
   &::before {
-    content: url("../images/reviews-decor-dot.png");
-    position: absolute;
+    background: url("../images/reviews-decor-dot.png");
+    @include decor-item;
+    width: 14.8rem;
+    height: 11rem;
     top: 0;
     left: 0;
   }
