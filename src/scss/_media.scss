@@ -48,20 +48,19 @@
     &__slide {
       min-width: 25%;
     }
-    &__container {
+    &__wrapper {
       padding: 4rem 0 0 0;
       margin: 0 6rem;
     }
   }
   .star-products-slider {
-    &__container {
+    &__wrapper {
       margin: 0 10rem;
     }
     &__slide {
-      min-width: 31.8%;
+      min-width: 33.333%;
     }
   }
-
   .button-prev-slider {
     left: 0;
   }
@@ -103,13 +102,8 @@
       font-size: 5rem;
     }
   }
-  .star-products-slider {
-    &__container {
-      margin: 0 15rem;
-    }
-    &__slide {
-      min-width: 31.5%;
-    }
+  .star-products-slider__wrapper {
+    margin: 0 15rem;
   }
 }
 @media screen and (max-width: 950px) {
@@ -117,15 +111,22 @@
     padding-bottom: 15rem;
   }
   .star-products-slider__slide {
-    min-width: 47.5%;
+    min-width: 50%;
   }
 }
 @media screen and (max-width: 850px) {
   .header {
     &__buttons,
-    &__menu,
-    &__icons {
+    &__menu {
       display: none;
+    }
+    &__icons {
+      position: absolute;
+      top: 3.5rem;
+      right: 13rem;
+    }
+    &__icon-search {
+      margin-right: 1rem;
     }
     &__logo {
       position: absolute;
@@ -215,6 +216,9 @@
   .subscribe {
     padding: 4rem 0;
   }
+  .header__icon {
+    stroke: var(--color-tuna);
+  }
   .home {
     background-position: right;
     &::before {
@@ -265,13 +269,8 @@
     margin: 0;
     width: 40%;
   }
-  .star-products-slider {
-    &__container {
-      margin: 0 5rem;
-    }
-    &__slide {
-      min-width: 47%;
-    }
+  .star-products-slider__wrapper {
+    margin: 0 5rem;
   }
   .service {
     &__items {
@@ -337,9 +336,14 @@
       padding: 3rem 2rem;
     }
     &__slide-img {
-      height: 15rem;
+      height: 20rem;
       width: 20rem;
       margin: 0 auto;
+    }
+    &__slide-btn {
+      right: -20px;
+      width: 40px;
+      height: 40px;
     }
   }
   .service {
@@ -452,11 +456,11 @@
     }
   }
   .star-products-slider {
-    &__container {
+    &__wrapper {
       margin: 0 10rem;
     }
     &__slide {
-      min-width: 96%;
+      min-width: 100%;
     }
   }
   .star-products {
@@ -481,7 +485,7 @@
     }
   }
   .product-slider {
-    &__container {
+    &__wrapper {
       margin: 0 10rem;
     }
     &__slide {
@@ -491,11 +495,14 @@
 }
 @media screen and (max-width: 400px) {
   .product-slider {
-    &__container {
+    &__wrapper {
       margin: 0 5rem;
     }
   }
   .service__content {
     width: 100%;
+  }
+  .star-products-slider__wrapper {
+    margin: 0 5rem;
   }
 }

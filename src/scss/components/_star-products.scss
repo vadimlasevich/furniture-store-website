@@ -54,17 +54,18 @@
   }
 }
 .star-products-slider {
-  &__container {
+  &__wrapper {
     margin: 0 5rem;
-    display: flex;
     overflow: hidden;
   }
-  &__slide {
-    min-width: 23.5%;
+  &__container {
+    display: flex;
+    transition: all 0.8s ease;
+  }
+  &__slide-content {
     border: 2px dashed rgba(52, 56, 61, 0.5);
-    border-radius: 200px 200px 20px 20px;
     padding: 3.6rem 5.4rem;
-    margin: 0 1.1rem;
+    border-radius: 200px 200px 20px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,17 +75,22 @@
       box-shadow: 0px 15px 39px rgba(0, 0, 0, 0.1);
     }
   }
+  &__slide {
+    min-width: 25%;
+    transition: all 0.8s ease;
+    padding: 0 1.1rem;
+  }
   &__slide-img {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 27rem;
+    height: 27rem;
     & img {
       position: relative;
       z-index: -1;
     }
   }
-  &__slide-content {
+  &__slide-info {
     position: relative;
   }
   &__slide-title {

@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
-  z-index: 100;
+  z-index: 110;
   &__top {
     display: flex;
     align-items: center;
@@ -91,7 +91,20 @@
     }
   }
 }
-
 .burger {
   @include burger-menu;
+}
+.burger-rotate {
+  background: #000;
+  & span {
+    transform: scale(0);
+  }
+  &::before {
+    transform: rotate(-45deg);
+    top: 45%;
+  }
+  &::after {
+    transform: rotate(45deg);
+    bottom: 50%;
+  }
 }

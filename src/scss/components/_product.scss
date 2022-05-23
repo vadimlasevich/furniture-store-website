@@ -17,11 +17,14 @@
   }
 }
 .product-slider {
+  &__wrapper {
+    padding: 4rem 2.6rem 0 2.6rem;
+    overflow: hidden;
+  }
   &__container {
     display: flex;
     justify-content: space-between;
-    padding: 4rem 2.6rem 0 2.6rem;
-    overflow: hidden;
+    transition: all 0.8s ease;
   }
   &__slide {
     min-width: 20%;

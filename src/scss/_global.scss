@@ -15,19 +15,6 @@
 .shadowed-active {
   display: block;
 }
-.burger-rotate {
-  & span {
-    transform: scale(0);
-  }
-  &::before {
-    transform: rotate(-45deg);
-    top: 45%;
-  }
-  &::after {
-    transform: rotate(45deg);
-    bottom: 45%;
-  }
-}
 .btn-empty {
   border: 2px solid #cda861;
   border-radius: 50px;

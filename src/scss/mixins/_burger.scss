@@ -7,9 +7,11 @@
   display: none;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
   cursor: pointer;
-  z-index: 120;
+  z-index: 160;
   &::before,
   &::after,
   & span {

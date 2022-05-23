@@ -1,0 +1,45 @@
+.aside {
+  max-width: 90%;
+  position: fixed;
+  top: 0;
+  right: -50rem;
+  opacity: 0;
+  background: rgb(62, 62, 62);
+  height: auto;
+  padding: 3rem;
+  border-radius: 0 0 0 20px;
+  transition: all 0.8s ease;
+  z-index: 130;
+  & a {
+    color: #fff;
+  }
+  &__phone {
+    justify-content: start;
+  }
+  &__menu,
+  &__buttons {
+    display: block;
+  }
+  &__list {
+    flex-direction: column;
+    margin: 2rem 0;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  &__link {
+  }
+  &__buttons {
+  }
+  &__button {
+    font-size: 1.7rem;
+    padding: 1.4rem 2rem;
+    &:nth-child(1) {
+      padding: 1.2rem 2rem;
+    }
+  }
+}
+.aside-active {
+  right: 0;
+  opacity: 1;
+}

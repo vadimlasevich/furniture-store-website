@@ -9,7 +9,8 @@
     <script src="js/app.min.js" defer></script>
   </head>
   <body>
-    @@include('html/header.html', {})
+    @@include('html/header.html', {}) @@include('html/aside.html', {})
+    <div class="header__burger burger"><span></span></div>
     <main>
       @@include('html/home.html', {}) @@include('html/about.html', {}) @@include('html/product.html', {})
       @@include('html/deals.html', {}) @@include('html/star-products.html', {}) @@include('html/service.html', {})
@@ -17,5 +18,6 @@
       @@include('html/subscribe.html', {})
     </main>
     @@include('html/footer.html', {})
+    <div class="shadowed"></div>
   </body>
 </html>
