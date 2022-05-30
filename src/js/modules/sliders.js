@@ -1,104 +1,56 @@
-export const productsSlider = () => {
-  const sliderContainer = document.querySelector(".product-slider__container");
-  const slides = document.querySelectorAll(".product-slider__slide");
-  const sliderButtonPrev = document.querySelector(".product-slider__button-prev");
-  const sliderButtonNext = document.querySelector(".product-slider__button-next");
+import { carousel } from './carouselSlider.js';
 
-  let count = 0;
+export const productsSlider = () => {
+  const slides = document.querySelectorAll('.product-slider__slide');
+  const windowWidth = {
+    xSmall: 520,
+    small: 576,
+    medium: 768,
+    extraLarge: 1180,
+  };
+
   let slidesLenght;
 
   const getSlidesLenght = () => {
-    if (window.innerWidth <= 520) {
+    if (window.innerWidth <= windowWidth.xSmall) {
       return (slidesLenght = slides.length - 1);
-    } else if (window.innerWidth <= 576) {
+    } else if (window.innerWidth <= windowWidth.small) {
       return (slidesLenght = slides.length - 2);
-    } else if (window.innerWidth <= 768) {
+    } else if (window.innerWidth <= windowWidth.medium) {
       return (slidesLenght = slides.length - 3);
-    } else if (window.innerWidth <= 1180) {
+    } else if (window.innerWidth <= windowWidth.extraLarge) {
       return (slidesLenght = slides.length - 4);
     } else {
       return (slidesLenght = slides.length - 5);
     }
   };
 
-  const nextSlide = () => {
-    getSlidesLenght();
-    if (count === slidesLenght) {
-      count = 0;
-      rollSlider(count);
-    } else {
-      count++;
-      rollSlider(count);
-    }
-  };
-
-  const prevSlide = () => {
-    getSlidesLenght();
-    if (count === 0) {
-      count = slidesLenght;
-      rollSlider(count);
-    } else {
-      count--;
-      rollSlider(count);
-    }
-  };
-
-  const rollSlider = (count) => {
-    let widthSlide = slides[0].offsetWidth;
-    sliderContainer.style.transform = `translate(-${count * widthSlide}px)`;
-  };
-
-  sliderButtonNext.addEventListener("click", nextSlide);
-  sliderButtonPrev.addEventListener("click", prevSlide);
+  getSlidesLenght();
+  carousel(slidesLenght, 'product');
 };
-export const starProductsSlider = () => {
-  const sliderContainer = document.querySelector(".star-products-slider__container");
-  const slides = document.querySelectorAll(".star-products-slider__slide");
-  const sliderButtonPrev = document.querySelector(".star-products-slider__button-prev");
-  const sliderButtonNext = document.querySelector(".star-products-slider__button-next");
 
-  let count = 0;
+export const starProductsSlider = () => {
+  const slides = document.querySelectorAll('.star-products-slider__slide');
+  const windowWidth = {
+    xSmall: 520,
+    large: 950,
+    extraLarge: 1180,
+  };
+
   let slidesLenght;
 
   const getSlidesLenght = () => {
-    if (window.innerWidth <= 520) {
+    if (window.innerWidth <= windowWidth.xSmall) {
       return (slidesLenght = slides.length - 1);
-    } else if (window.innerWidth < 950) {
+    } else if (window.innerWidth < windowWidth.large) {
       return (slidesLenght = slides.length - 2);
-    } else if (window.innerWidth <= 1180) {
+    } else if (window.innerWidth <= windowWidth.extraLarge) {
       return (slidesLenght = slides.length - 3);
     } else {
       return (slidesLenght = slides.length - 4);
     }
   };
 
-  const nextSlide = () => {
-    getSlidesLenght();
-    if (count === slidesLenght) {
-      count = 0;
-      rollSlider(count);
-    } else {
-      count++;
-      rollSlider(count);
-    }
-  };
-
-  const prevSlide = () => {
-    getSlidesLenght();
-    if (count === 0) {
-      count = slidesLenght;
-      rollSlider(count);
-    } else {
-      count--;
-      rollSlider(count);
-    }
-  };
-
-  const rollSlider = (count) => {
-    let widthSlide = slides[0].offsetWidth;
-    sliderContainer.style.transform = `translate(-${count * widthSlide}px)`;
-  };
-
-  sliderButtonNext.addEventListener("click", nextSlide);
-  sliderButtonPrev.addEventListener("click", prevSlide);
+  getSlidesLenght();
+  carousel(slidesLenght, 'star-products');
 };
